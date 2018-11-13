@@ -1,0 +1,48 @@
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
+
+namespace JsonRPCBitcoinLibrary1
+{
+
+    /// <summary>
+    /// This is requesting the signing of the raw transaction from Bitcoin
+    /// Credit to: GeorgeKimionis & BitcoinLib
+    /// </summary>
+
+    public class SignRawTransactionRequest1
+    {
+        public SignRawTransactionRequest1(string rawTransactionHex, string sigHashType = "ALL")
+        {
+            RawTransactionHex = rawTransactionHex;
+            Inputs = new List<SignRawTransactionInput>();
+            PrivateKeys = new List<string>();
+            SigHashType = sigHashType;
+        }
+
+        public string RawTransactionHex { get; set; }
+        public List<SignRawTransactionInput> Inputs { get; set; }
+        public List<string> PrivateKeys { get; set; }
+        public string SigHashType { get; set; }
+
+        public void AddInput(string txId, int vout, string scriptPubKey, string redeemScript)
+        {
+            Inputs.Add(new SignRawTransactionInput
+            {
+                TxId = txId,
+                Vout = vout,
+                ScriptPubKey = scriptPubKey,
+                RedeemScript = redeemScript
+            });
+        }
+
+        public void AddInput(SignRawTransactionInput signRawTransactionInput)
+        {
+            Inputs.Add(signRawTransactionInput);
+        }
+
+        public void AddKey(string privateKey)
+        {
+            PrivateKeys.Add(privateKey);
+        }
+    }
+}

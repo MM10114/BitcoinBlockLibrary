@@ -1,0 +1,3 @@
+C:\Users\mmetcal4\Documents\Visual Studio 2017\Projects\TestClassLibrary1\TestClassLibrary1\obj\Debug\TestClassLibrary1.dll
+C:\Users\mmetcal4\Documents\Visual Studio 2017\Projects\TestClassLibrary1\TestClassLibrary1\obj\Debug\TestClassLibrary1.pdb
+C:\Users\mmetcal4\Documents\Visual Studio 2017\Projects\TestClassLibrary1\TestClassLibrary1\obj\Debug\JsonRPCBitcoinLibrary1.csprojResolveAssemblyReference.cache
